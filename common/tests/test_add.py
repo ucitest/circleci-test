@@ -1,10 +1,12 @@
 __author__ = "Bagio Johnson"
 
+import sys
+print(sys.path)
 from common.utils import add
 import unittest
-import sys
 
-print(sys.path)
+
+
 
 class Test():
     def setUp(self):
