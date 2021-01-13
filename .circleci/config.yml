@@ -20,6 +20,7 @@ jobs:
           name: run tests
           command: |
             . ./root/bin/activate
+            echo $PYTHONPATH
             pytest ~/circleci-test/common/tests/
 workflows:
   version: 2
