@@ -17,11 +17,15 @@ jobs:
             pip install -r ./common/requirements.txt
 
       - run:
+          name: venvactivate
+          command: . ./root/bin/activate
+      - run:
+          name: echo
+          command: echo $PYTHONPATH
+      - run:
           name: run tests
-          command: |
-            . ./root/bin/activate
-            echo $PYTHONPATH
-            pytest ~/circleci-test/common/tests/
+          command: pytest ~/circleci-test/common/tests/
+
 workflows:
   version: 2
   build_test:
