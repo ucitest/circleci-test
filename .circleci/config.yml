@@ -15,6 +15,7 @@ jobs:
           command: |
             . ./root/bin/activate
             pip install -r ./common/requirements.txt
+            export PYTHONPATH=~/circleci-test/:$PYTHONPATH
             pytest ~/circleci-test/common/tests/
 
 workflows:
